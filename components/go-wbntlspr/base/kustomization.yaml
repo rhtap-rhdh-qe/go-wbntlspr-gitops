@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-wbntlspr
+  janus-idp.io/tekton: go-wbntlspr
+  backstage.io/kubernetes-id: go-wbntlspr
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-wbntlspr
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
